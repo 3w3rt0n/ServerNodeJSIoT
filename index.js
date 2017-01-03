@@ -12,10 +12,12 @@ var server = http.createServer(function(request, response){
 		response.write("<h1>Bem-vindo :)</h1>");
 		console.log('Pagina bem vindo');
 	}else if(request.url == "/dispositivos"){
+		console.log('Arquivo dispositivos - inicio.');
 		fs.readFile(__dirname + '/HTML/dispositivos.html', function(err, html){
-			response.write(html);		
+			response.write(html);
+			console.log(html);
 		});
-		console.log('Arquivo dispositivos.');
+		console.log('Arquivo dispositivos - fim.');
 	}else {
 		response.write("<h1>Página não encontrada :(</h1>");
 		console.log('Pagina nao encontrada');
