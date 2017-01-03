@@ -1,13 +1,13 @@
 {  
-	"name": "heroku-teste",  
+	"name": "Servidor-IoT",  
 	"version": "1.0.0",  
-	"description": "Teste de deploy no Heroku",  
+	"description": "Servidor IoT - ESP8266",  
 	"main": "index.js",  
 	"scripts": {    
 		"start": "node index.js"
 	},  
 	"keywords": [
-    		"teste",
+    		"IoT",
     		"heroku"
   	],  
 	"author": "3w3rt0n",  
