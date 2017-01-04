@@ -8,8 +8,12 @@
 	},  
 	"keywords": [
     		"IoT",
-    		"heroku"
+    		"heroku",
+		"Node.js"
   	],  
+	"dependencies": {
+		"mongoose": "~3.6.2"
+	},
 	"author": "3w3rt0n",  
 	"license": "MIT"
 }
