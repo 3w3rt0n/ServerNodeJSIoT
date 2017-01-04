@@ -1,6 +1,30 @@
 var http = require('http');
 var fs = require('fs');
+var mongoose = require('mongoose');
 
+var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/HelloMongoose';
+
+mongoose.connect(uristring, function (err, res) {
+      if (err) {
+      	console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+      } else {
+      	console.log ('Succeeded connected to: ' + uristring);
+      }
+});
+ 
+// Cria um novo Schema com os campos que iremos utilizar no model Contato
+var bancoSchema = new mongoose.Schema({
+  nome: String,
+  email: { type: String, required: true, unique: true },
+  senha: { type: String, required: true },
+  id: String,
+  dispositivos: Number
+});
+ 
+//Define o model do banco
+var banco = mongoose.model('banco', bancoSchema);
+
+// Criar o servidor
 var server = http.createServer(function(request, response){
 	
 	response.writeHead(200, {"Content-Type": "text/html"});
