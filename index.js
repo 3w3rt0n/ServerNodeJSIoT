@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var mongoose = require('mongoose');
 
-var uristring = 'mongodb://3w3rt0n:sousa272@ds155028.mlab.com:55028/banco1';
+var uristring = 'mongodb://usuario:senha@ds155028.mlab.com:55028/banco1';
 
 mongoose.connect(uristring, function (err, res) {
       if (err) {
