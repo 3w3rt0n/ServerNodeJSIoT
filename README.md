@@ -6,7 +6,14 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### IoT - ESP8266
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+As plataformas baseadas no ESP-8266 foi o primeiro chip a desbancar o arduino tanto que ganhou o modesto apelido de arduinokiller, foi lançado em agosto de 2014.
+
+![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/modulos-esp8266.png)
+
+### ESP-8266 - Witty
+
+![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/ESP8266-Witty.jpg)
+
 
 ```markdown
 Syntax highlighted code block
