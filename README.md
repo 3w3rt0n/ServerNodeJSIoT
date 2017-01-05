@@ -1,19 +1,26 @@
-## Projeto de IoT com Node.js
+# Projeto de IoT com Node.js
 
 You can use the [editor on GitHub](https://github.com/3w3rt0n/ServerNodeJSIoT/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### IoT - ESP8266
+## IoT - ESP8266
 
 As plataformas baseadas no ESP-8266 foi o primeiro chip a desbancar o arduino tanto que ganhou o modesto apelido de arduinokiller, foi lançado em agosto de 2014.
 
 ![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/modulos-esp8266.png)
 
-### ESP-8266 - Witty
+### Witty Cloud
 
 ![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/ESP8266-Witty.jpg)
 
+### Wemos D1
+
+![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/wemosd1.jpg)
+
+### ESP-01
+
+![Image](https://github.com/3w3rt0n/ServerNodeJSIoT/blob/master/Documentacao/Imagens/esp8266-esp01.jpg)
 
 ```markdown
 Syntax highlighted code block
