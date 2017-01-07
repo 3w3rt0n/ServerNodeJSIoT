@@ -40,8 +40,8 @@ var server = http.createServer(function(request, response){
         	var form = new multiparty.Form();
  
     		form.parse(request, function(err, fields, files) {
-			console.log(fields[0][0]);
-      			response.end(fields[0][0]);
+			console.log(fields['email'][0]);
+      			response.end(fields['email'][0]);
     		});
  
     		return;
