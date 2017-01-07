@@ -36,7 +36,7 @@ var server = http.createServer(function(request, response){
 	
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
-	if (request.url == "/login" && request.method == 'POST') {
+	if (request.url == "/login" && request.method == "POST") {
         	var body = '';
     		request.on('data', function(chunk) {
       			body += chunk.toString();
