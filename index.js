@@ -40,13 +40,18 @@ var server = http.createServer(function(request, response){
         	var body = '';
     		request.on('data', function(chunk) {
       			body += chunk;
+			console.log("1-Body: ");
 			console.log(body);
     		});
     		request.on('end', function() {
+			console.log("2-Body: ");
+			console.log(body);
       			var data = qs.parse(body);
+			console.log("Email: ");
 			console.log(data.email);
+			console.log("Senha: ");
 			console.log(data.pwd);
-			response.end();
+			
       			// now you can access `data.email` and `data.password`
    		});
     	}else if(request.url == "/"){
