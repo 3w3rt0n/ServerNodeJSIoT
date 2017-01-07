@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const qs = require('querystring');
+var qs = require('querystring');
 
 const low = require('lowdb');
 const db = low('dbteste.json');
@@ -47,7 +47,7 @@ var server = http.createServer(function(request, response){
       			var data = qs.parse(body);
 			console.log("Email: " + data.email);
 			console.log("Senha: " + data.pwd);	
-			response.edn();
+			response.end();
       			// now you can access `data.email` and `data.password`
    		});
     	}else if(request.url == "/"){
