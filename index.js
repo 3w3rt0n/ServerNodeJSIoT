@@ -40,8 +40,8 @@ var server = http.createServer(function(request, response){
         	var form = new multiparty.Form();
  
     		form.parse(request, function(err, fields, files) {
-     			request.write('received upload:\n\n');
-      			request.end(util.inspect({fields: fields, files: files}));
+     			response.write('received upload:\n\n');
+      			response.end(util.inspect({fields: fields, files: files}));
 			console.log(util.inspect({fields: fields, files: files}));
     		});
  
