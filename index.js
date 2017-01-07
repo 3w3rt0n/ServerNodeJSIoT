@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const multiparty = require('multiparty');
 
 const low = require('lowdb');
 const db = low('dbteste.json');
@@ -30,29 +31,21 @@ console.log(resultado);
 //Define o model do banco
 //var banco = mongoose.model('banco', bancoSchema);
 
-var body = '';
-
 // Criar o servidor
 var server = http.createServer(function(request, response){
 	
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
 	if (request.url == "/login" && request.method == 'POST') {
-        	request.on('data', function (data) {
-	            	body += data.toString();
-        	    	// Too much POST data, kill the connection!
-            		// 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
-            		if (body.length > 1e6)
-	                	request.connection.destroy();
-        	});
-
-        	request.on('end', function () {
-			response.write("<h1>POST</h1>");
-			console.log('POST: ');
-			response.end();
-            		console.log(body); // should work
-            		// use post['blah'], etc.
-        	});
+        	var form = new multiparty.Form();
+ 
+    		form.parse(request, function(err, fields, files) {
+      			request.writeHead(200, {'content-type': 'text/plain'});
+     			request.write('received upload:\n\n');
+      			request.end(util.inspect({fields: fields, files: files}));
+    		});
+ 
+    		return;
     	}else if(request.url == "/"){
 		response.write("<h1>Página principal</h1>");
 		console.log('Pagina inicial');
