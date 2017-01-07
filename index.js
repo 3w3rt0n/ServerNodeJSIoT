@@ -46,7 +46,7 @@ var server = http.createServer(function(request, response){
 			console.log("2-Body: " + body);
       			var data = qs.parse(body);
 			console.log("Email: " + data.email);
-			console.log("Senha: " + data.pwd);	
+			console.log("Senha: " + data);	
 			response.end();
       			// now you can access `data.email` and `data.password`
    		});
