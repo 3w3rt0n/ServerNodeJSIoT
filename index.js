@@ -38,7 +38,6 @@ var server = http.createServer(function(request, response){
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
 	if (request.method == 'POST') {
-        	body = '';
         	request.on('data', function (data) {
 	            	body += data.toString();
         	    	// Too much POST data, kill the connection!
@@ -61,18 +60,18 @@ var server = http.createServer(function(request, response){
 	}else if(request.url == "/login"){
 		fs.readFile(__dirname + '/HTML/login.html', function(err, html){
 			response.write(html);
-			console.log(html);
+			console.log("Enviado login.html");
 			response.end();
 		});
 	}else if(request.url == "/dispositivos"){
 		fs.readFile(__dirname + '/HTML/dispositivos.html', function(err, html){
 			response.write(html);
-			console.log(html);
+			console.log("Enviado dispositivos.html");
 			response.end();
 		});
 	}else {
 		response.write("<h1>Página não encontrada :(</h1>");
-		console.log('Pagina nao encontrada');
+		console.log('Página não encontrada');
 		response.end();
 	}
 	
