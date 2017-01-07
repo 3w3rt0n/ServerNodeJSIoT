@@ -13,7 +13,8 @@
   	],  
 	"dependencies": {
 		"lowdb": "^0.14.0",
-		"mongoose": "~3.6.2"
+		"mongoose": "~3.6.2",
+		"multiparty": "^4.1.2"
 	},
 	"author": "3w3rt0n",  
 	"license": "MIT"
