@@ -39,7 +39,7 @@ var server = http.createServer(function(request, response){
 	if (request.url == "/login" && request.method == 'POST') {
         	var body = '';
     		request.on('data', function(chunk) {
-      			body += chunk;
+      			body += chunk.toString();
 			console.log("1-Body: " + body);
     		});
     		request.on('end', function() {
