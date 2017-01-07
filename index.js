@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-var qs = require('querystring');
+var qs = require('qs');
 
 const low = require('lowdb');
 const db = low('dbteste.json');
