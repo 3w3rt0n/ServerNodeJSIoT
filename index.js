@@ -40,10 +40,12 @@ var server = http.createServer(function(request, response){
         	var body = '';
     		request.on('data', function(chunk) {
       			body += chunk;
+			console.log(body);
     		});
     		request.on('end', function() {
       			var data = qs.parse(body);
 			console.log(data.email);
+			console.log(data.pwd);
 			response.end();
       			// now you can access `data.email` and `data.password`
    		});
