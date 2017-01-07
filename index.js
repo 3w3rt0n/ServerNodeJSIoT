@@ -30,13 +30,15 @@ console.log(resultado);
 //Define o model do banco
 //var banco = mongoose.model('banco', bancoSchema);
 
+var body = '';
+
 // Criar o servidor
 var server = http.createServer(function(request, response){
 	
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
 	if (request.method == 'POST') {
-        	var body = '';
+        	body = '';
         	request.on('data', function (data) {
 	            	body += data;
         	    	// Too much POST data, kill the connection!
