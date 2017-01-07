@@ -13,7 +13,7 @@
   	],  
 	"dependencies": {
 		"lowdb": "^0.14.0",
-		"mongoose": "~3.6.2"
+    		"querystring": "^0.2.0"
 	},
 	"author": "3w3rt0n",  
 	"license": "MIT"
