@@ -46,6 +46,9 @@ var server = http.createServer(function(request, response){
         	});
 
         	request.on('end', function () {
+			response.write("<h1>POST</h1>");
+			console.log('POST: ');
+			response.end();
             		console.log(body); // should work
             		// use post['blah'], etc.
         	});
