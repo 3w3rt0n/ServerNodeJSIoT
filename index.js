@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const multiparty = require('multiparty');
+const qs = require('querystring');
 
 const low = require('lowdb');
 const db = low('dbteste.json');
@@ -37,14 +37,16 @@ var server = http.createServer(function(request, response){
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
 	if (request.url == "/login" && request.method == 'POST') {
-        	var form = new multiparty.Form();
- 
-    		form.parse(request, function(err, fields, files) {
-			console.log(fields['email'][0]);
-      			response.end(fields['email'][0]);
+        	var body = '';
+    		request.on('data', function(chunk) {
+      			body += chunk;
+			console.log(body);
     		});
- 
-    		return;
+    		request.on('end', function() {
+      			var data = qs.parse(body);
+			console.log(data.email);
+      			// now you can access `data.email` and `data.password`
+   		});
     	}else if(request.url == "/"){
 		response.write("<h1>Página principal</h1>");
 		console.log('Pagina inicial');
